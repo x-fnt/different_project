@@ -1,0 +1,13 @@
+version: '4.0'
+
+services:
+  pg-db:
+    image: postgres:latest
+    container_name: pg-db
+    ports:
+      - "5432:5432"
+    restart: always
+    environment:
+      - POSTGRES_DB=pg-db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
